@@ -1,19 +1,24 @@
 {
   "name": "google-hole-punch",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
+    "dev": "wrangler dev --test-scheduled",
+    "start": "wrangler dev --test-scheduled",
     "test": "vitest",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "lint": "npx prettier . --write"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.5.2",
     "@cloudflare/workers-types": "^4.20241218.0",
+    "prettier": "3.4.2",
     "typescript": "^5.5.2",
     "vitest": "2.1.8",
     "wrangler": "^3.60.3"
+  },
+  "dependencies": {
+    "cloudflare": "^3.5.0"
   }
 }

@@ -22,8 +22,12 @@ enabled = true
 # - https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/workers/configuration/secrets/
-# [vars]
-# MY_VARIABLE = "production_value"
+[vars]
+ACCESS_GROUP_ID = "62174ffa-cecf-47c5-ba03-b7928329293b"
+CLOUDFLARE_ACCOUNT_ID = "b1caf8cf81b661ff2c8de602eea21c63"
+
+[triggers]
+crons = ["0 0 * * *"] # Run every day at midnight
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai
